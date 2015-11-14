@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>author</title>
+</head>
+<body>
+	{%for author in authors%}
+	<div>
+		<h3>{{author.name}}</h3>
+		age:{{author.age}}</br>
+		{%for book in author.book_set.all%}
+		book: {{book.title}}</br>
+		{%endfor%}
+	</div>
+	{%endfor%}
+</body>
+</html>
